@@ -19,7 +19,7 @@ green_mask_resized = cv2.resize(green_mask, (0, 0), fx=scale, fy=scale)
 cv2.imshow("Mask of green", green_mask_resized)
 cv2.waitKey(0)
 
-contours, hierarchy = cv2.findContours(green_mask.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours = cv2.findContours(green_mask.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 min_area = 500
 
 for contour in contours:
